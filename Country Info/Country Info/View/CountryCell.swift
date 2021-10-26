@@ -14,9 +14,10 @@ class CountryCell: UITableViewCell {
     @IBOutlet var countryCapitalLabel: UILabel!
     
     func configure (with country: Country) {
-        countryNameLabel.text = country.name ?? "старна не найдена"
-        countryCapitalLabel.text = country.capital ?? "столица не найдена"
+        countryNameLabel.text = country.name ?? "Country not found"
+        countryCapitalLabel.text = country.capital ?? "Capital not found"
         countryFlagImage.fetchData(with: country.flags?.png)
+        
     }
 }
 

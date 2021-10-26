@@ -8,21 +8,29 @@
 import UIKit
 
 class MainViewController: UITableViewController {
+ 
     
-    var countries: [Country] = []
-    let url = "https://restcountries.com/v2/all"
+    @IBOutlet var searchBar: UITableView!
+        
+    var countries: [Country]! = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetchData(for: url) { (launch) in
-            if let countries = launch {
-                self.countries = countries
-                self.tableView.reloadData()
+        searchBar.delegate = self
+        
+        tableView.rowHeight = 100
+        
+        NetworkManager.shared.fetchData { (country) in
+            if let countries = country {
+            self.countries = countries
+            self.tableView.reloadData()
             }
         }
         
     }
+    
     
     // MARK: - Table view data source
 
@@ -37,12 +45,6 @@ class MainViewController: UITableViewController {
         return countries.count
     }
     
-    // MARK: - Table View Delegate
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-
     // MARK: - Navigation
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,4 +57,7 @@ class MainViewController: UITableViewController {
     }
     
 
+    
 }
+
+

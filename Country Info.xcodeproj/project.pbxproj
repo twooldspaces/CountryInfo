@@ -18,6 +18,7 @@
 		BA23745C272007F6006C8F9D /* CountryNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23745B272007F6006C8F9D /* CountryNetworkService.swift */; };
 		BA23746C27206129006C8F9D /* CacheFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23746B27206129006C8F9D /* CacheFiles.swift */; };
 		BA23747027207E02006C8F9D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA23746F27207E02006C8F9D /* DetailViewController.swift */; };
+		BA85452C272284B2009BEE9D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85452B272284B2009BEE9D /* StorageManager.swift */; };
 		BAD49C42272175770001386D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD49C41272175770001386D /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		BA23745B272007F6006C8F9D /* CountryNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryNetworkService.swift; sourceTree = "<group>"; };
 		BA23746B27206129006C8F9D /* CacheFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFiles.swift; sourceTree = "<group>"; };
 		BA23746F27207E02006C8F9D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BA85452B272284B2009BEE9D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		BAD49C41272175770001386D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		BA23743E271FF290006C8F9D /* Country Info */ = {
 			isa = PBXGroup;
 			children = (
+				BA85452A27228486009BEE9D /* StorageManager */,
 				BA23745A272007D1006C8F9D /* Network Service */,
 				BA237440271FF2B8006C8F9D /* Model */,
 				BA237441271FF2C0006C8F9D /* View */,
@@ -100,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				BA237448271FF3D6006C8F9D /* Country.swift */,
-				BA23746B27206129006C8F9D /* CacheFiles.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 		BA237446271FF372006C8F9D /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				BA23746B27206129006C8F9D /* CacheFiles.swift */,
 				BA23742D271FEEF9006C8F9D /* Assets.xcassets */,
 				BA237432271FEEF9006C8F9D /* Info.plist */,
 			);
@@ -163,6 +166,14 @@
 				BA23745B272007F6006C8F9D /* CountryNetworkService.swift */,
 			);
 			path = "Network Service";
+			sourceTree = "<group>";
+		};
+		BA85452A27228486009BEE9D /* StorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				BA85452B272284B2009BEE9D /* StorageManager.swift */,
+			);
+			path = StorageManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				BA23745827200495006C8F9D /* CountryCell.swift in Sources */,
 				BA237427271FEEF6006C8F9D /* SceneDelegate.swift in Sources */,
 				BA23744D271FF3EE006C8F9D /* MainViewController.swift in Sources */,
+				BA85452C272284B2009BEE9D /* StorageManager.swift in Sources */,
 				BAD49C42272175770001386D /* NetworkError.swift in Sources */,
 				BA23745C272007F6006C8F9D /* CountryNetworkService.swift in Sources */,
 			);

@@ -11,8 +11,9 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchData(for url: String, complition: @escaping ([Country]?) -> ()) {
-        guard let url = URL(string: url) else { return }
+    func fetchData(complition: @escaping ([Country]?) -> ()) {
+        let urlString = "https://restcountries.com/v2/all"
+        guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print(error)
